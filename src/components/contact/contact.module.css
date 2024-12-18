@@ -1,0 +1,12 @@
+.container {
+
+}
+
+.btn {
+    font-family: var(--font-magra-regular);
+    background-color: var(--color-primary);
+    height: 3em;
+    width: 8em;
+    border-radius: 4px;
+    border: 1px solid white;
+}

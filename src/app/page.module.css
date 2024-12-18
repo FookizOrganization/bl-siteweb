@@ -1,0 +1,11 @@
+.page {
+    font-family: var(--font-magra-regular);
+    background-image: linear-gradient(to right, rgba(57, 121, 134, 0.7), rgba(255, 255, 255, 0.4)), url('/photos/background-home.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.container {
+    color: white;
+}
