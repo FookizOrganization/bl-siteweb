@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getProvision } from "@/components/contact/getProvision";
 import styles from "./contact.module.css";
+import { Select } from "antd";
 
 // Définition des types des props du composant
 interface ProvisionDropdownProps {
@@ -25,26 +26,26 @@ const ProvisionDropdown: React.FC<ProvisionDropdownProps> = ({ onTableChange }) 
 
     const [tableData, setTableData] = useState<TableData[]>([]);
 
-    const handleFirstLevelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setFirstLevel(event.target.value);
+    const handleFirstLevelChange = (value: string) => {
+        setFirstLevel(value);
         setSecondLevel(null);
         setThirdLevel(null);
         setMaterialLevel(null);
     };
 
-    const handleSecondLevelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setSecondLevel(event.target.value);
+    const handleSecondLevelChange = (value: string) => {
+        setSecondLevel(value);
         setThirdLevel(null);
         setMaterialLevel(null);
     };
 
-    const handleThirdLevelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setThirdLevel(event.target.value);
+    const handleThirdLevelChange = (value: string) => {
+        setThirdLevel(value);
         setMaterialLevel(null);
     };
 
-    const handleMaterialChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setMaterialLevel(event.target.value);
+    const handleMaterialChange = (value: string) => {
+        setMaterialLevel(value);
     };
 
     const handleAdd = () => {
@@ -135,66 +136,29 @@ const ProvisionDropdown: React.FC<ProvisionDropdownProps> = ({ onTableChange }) 
 
             <div className={styles.titleDDL}>Vous êtes intéréssé par : </div>
             <div className={styles.provisionDDLs}>
-                <div>
-                    <select  onChange={handleFirstLevelChange} value={firstLevel || ""}>
-                        <option value="" disabled>
-                            Sélectionnez
-                        </option>
-                        {firstLevelOptions.map((option) => (
-                            <option key={option} value={option}>
-                                {option}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-
-                <select
-                    id="second-level"
+                <Select
+                    placeholder="Sélectionnez"
+                    onChange={handleFirstLevelChange}
+                    options={firstLevelOptions.map((option) => ({ value: option }))}
+                />
+                <Select
+                    placeholder="Sélectionnez"
                     onChange={handleSecondLevelChange}
-                    value={secondLevel || ""}
                     disabled={!secondLevelOptions.length}
-                >
-                    <option value="" disabled>
-                        Sélectionnez
-                    </option>
-                    {secondLevelOptions.map((option) => (
-                        <option key={option} value={option}>
-                            {option}
-                        </option>
-                    ))}
-                </select>
-
-                <select
-                    id="third-level"
+                    options={secondLevelOptions.map((option) => ({ value: option }))}
+                />
+                <Select
+                    placeholder="Sélectionnez"
                     onChange={handleThirdLevelChange}
-                    value={thirdLevel || ""}
                     disabled={!thirdLevelOptions.length}
-                >
-                    <option value="" disabled>
-                        Sélectionnez
-                    </option>
-                    {thirdLevelOptions.map((option) => (
-                        <option key={option} value={option}>
-                            {option}
-                        </option>
-                    ))}
-                </select>
-
-                <select
-                    id="material-level"
+                    options={thirdLevelOptions.map((option) => ({ value: option }))}
+                />
+                <Select
+                    placeholder="Sélectionnez"
                     onChange={handleMaterialChange}
-                    value={materialLevel || ""}
                     disabled={!materialOptions.length}
-                >
-                    <option value="" disabled>
-                        Sélectionnez
-                    </option>
-                    {materialOptions.map((option) => (
-                        <option key={option} value={option}>
-                            {option}
-                        </option>
-                    ))}
-                </select>
+                    options={materialOptions.map((option) => ({ value: option }))}
+                />
 
                 <button
                     onClick={handleAdd}

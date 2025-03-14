@@ -11,7 +11,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import styles from "./embla.module.css";
 import { PictureWrapper } from "@/components/pictures/pictureWrapper";
-import PhotoGrid  from "@/components/carousel/modal";
+import PhotoGrid from "@/components/pictures/modal";
 
 type PropType = {
     slides: any[]

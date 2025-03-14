@@ -1,0 +1,201 @@
+.RealisationsContainer {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 4rem;
+}
+
+.picturesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.titleContainer {
+    color: var(--color-primary);
+    font-family: var(--font-magra-bold), serif;
+    font-size: clamp( 2rem, 3vw, 3rem);
+    padding: clamp( 2.5rem, 4vw, 4rem);
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.element {
+    height: 600px;
+    color: #fff;
+    text-align: center;
+    background: #364d79;
+}
+
+.carousel {
+    height: 600px;
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.photoGrid {
+    height: 520px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+ .slick-list {
+    overflow: visible !important;
+}
+
+.slick-slide {
+    opacity: 0.4;
+}
+
+ .slick-slide.slick-active {
+    opacity: 1;
+}
+
+ .slick-track {
+    display: flex !important;
+    gap: 1rem;
+}
+
+  .carousel .slick-prev {
+    inset-inline-start: -30px !important;
+    opacity: 1 !important;
+}
+
+ .slick-prev:after, .slick-next:after {
+    color: var(--color-primary) !important;
+    height: 16px !important;
+    width: 16px !important;
+}
+
+  .carousel .slick-next {
+    opacity: 1 !important;
+    inset-inline-end: -30px !important;
+}
+
+ .slick-dots > li > button:after {
+    background-color: var(--color-primary) !important;
+}
+
+.slick-dots > .slick-active:after {
+    background-color: var(--color-primary) !important;
+}
+
+.informationsModal {
+    box-sizing: border-box;
+    bottom:0;
+    font-family: var(--font-magra-regular), serif;
+    border-top: 1px solid rgba(61, 136, 149);
+    background-color: rgba(61, 136, 149, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    height: 30%;
+}
+
+.informationsModal .title {
+    font-size: clamp(0.8rem, 3vw, 1.3rem);
+    text-transform: uppercase;
+}
+
+.informationsModal .relativeWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.informationsModal .titleLocation {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.informationsModal .description {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    text-align: start;
+    padding-left: 2rem;
+}
+.informationsModal .location {
+    white-space: nowrap;
+}
+
+.informationsModal .type {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.ant-modal-content {
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.ant-modal {
+    max-width: 1024px !important;
+}
+
+.ant-image img {
+    width: 100%; /* L'image prend toute la largeur disponible */ /* L'image prend toute la hauteur disponible */
+    object-fit: cover; /* Remplissage sans déformation */
+}
+
+.ant-image {
+    height: 520px;
+}
+
+.ant-image-img {
+    height: 520px !important;
+}
+
+.photoGrid .slick-slide {
+    display: flex !important;
+    background-color: rgba(0, 0, 0, 0.13);
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .ant-image {
+        height: 400px;
+    }
+
+    .ant-image-img {
+        height: 400px !important;
+    }
+
+    .photoGrid {
+        height: 400px;
+        width: 100%;
+    }
+
+    .carousel {
+        height: 500px;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .carousel .slick-prev {
+        inset-inline-start: 30px !important;
+    }
+
+    .carousel .slick-next {
+        inset-inline-end: 30px !important;
+    }
+
+    .slick-track {
+        gap: 0;
+    }
+    .slick-dots {
+        z-index:0 !important;
+    }
+}

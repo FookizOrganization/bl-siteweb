@@ -3,6 +3,7 @@
 import styles from "./contact.module.css";
 import React, { useState } from "react";
 import ProvisionDropdown from "@/components/contact/provisionDropdown";
+import { Input } from "antd";
 
 function Contact() {
 
@@ -56,7 +57,7 @@ function Contact() {
                                     <form onSubmit={handleSubmit}>
                                         <div className={styles.formGroupContainer}>
                                             <div className={styles.formGroup}>
-                                                <input
+                                                <Input
                                                     type="text"
                                                     id="name"
                                                     name="name"
@@ -64,11 +65,10 @@ function Contact() {
                                                     onChange={handleChange}
                                                     required
                                                     placeholder="Votre nom"
-                                                    className={styles.input}
                                                 />
                                             </div>
                                             <div className={styles.formGroup}>
-                                                <input
+                                                <Input
                                                     type="email"
                                                     id="email"
                                                     name="email"
@@ -76,11 +76,10 @@ function Contact() {
                                                     onChange={handleChange}
                                                     required
                                                     placeholder="Votre email"
-                                                    className={styles.input}
                                                 />
                                             </div>
                                             <div className={styles.formGroup}>
-                                                <input
+                                                <Input
                                                     type="phone"
                                                     id="phone"
                                                     name="phone"
@@ -88,21 +87,20 @@ function Contact() {
                                                     onChange={handleChange}
                                                     required
                                                     placeholder="Votre téléphone"
-                                                    className={styles.input}
                                                 />
                                             </div>
                                         </div>
 
                                         <div className={styles.formGroupContainer}>
                                             <div className={styles.formGroup}>
-                                                <textarea
+                                                <Input.TextArea
+                                                    rows={4}
                                                     id="message"
                                                     name="message"
                                                     value={formData.message}
                                                     onChange={handleChange}
                                                     required
                                                     placeholder="Votre message"
-                                                    className={styles.textarea}
                                                 />
                                             </div>
                                         </div>

@@ -65,3 +65,9 @@
     font-size: 0.8rem;
     font-style: italic;
 }
+
+@media (max-width: 800px) {
+    .informations {
+        min-height: 300px;
+    }
+}

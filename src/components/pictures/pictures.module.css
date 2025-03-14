@@ -18,7 +18,6 @@
     font-size: clamp( 2rem, 3vw, 3rem);
     padding: clamp( 2.5rem, 4vw, 4rem);
     text-transform: uppercase;
-
 }
 
 .gridContainer {

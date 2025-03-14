@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 };
 
 import localFont from 'next/font/local';
+import {AntdRegistry} from "@ant-design/nextjs-registry";
 
 const geist = localFont({
     src: [
@@ -66,7 +67,7 @@ export default function RootLayout({
       <body
           className={`${geist.variable} ${geistMono.variable} ${magraRegular.variable} ${magraBold.variable}`}
       >
-        {children}
+        <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>
   );
