@@ -1,0 +1,23 @@
+.footer {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-magra-regular), serif;
+    font-size: clamp( 0.8rem, 2vw, 1.1rem);
+    background-color: rgba(61, 136, 149, 0.7);
+    border-top: 2px solid var(--color-primary);
+}
+
+.dev {
+    color: white;
+    font-size: clamp( 0.6rem, 2vw, 1rem);
+    font-family: var(--font-magra-regular), serif;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.dev > button {
+    background-color: transparent;
+}

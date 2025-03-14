@@ -1,0 +1,67 @@
+.pictureWrapper {
+    direction: ltr;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.informations {
+    box-sizing: border-box;
+    position: absolute;
+    bottom:0;
+    font-family: var(--font-magra-regular), serif;
+    border-top: 1px solid rgba(61, 136, 149);
+    background-color: rgba(255, 255, 255, 0.67);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #295b67;
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+}
+
+.title {
+    font-size: clamp(0.8rem, 3vw, 1.3rem);
+    text-transform: uppercase;
+}
+
+.relativeWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.titleLocation {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.description {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    text-align: start;
+    padding-left: 2rem;
+}
+.location {
+    white-space: nowrap;
+}
+
+.type {
+    font-size: 0.8rem;
+    font-style: italic;
+}

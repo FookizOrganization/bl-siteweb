@@ -1,0 +1,122 @@
+.photoGrid {
+    padding: 6px;
+    display: grid;
+    gap: 10px; /* Espacement entre les photos */
+    width: 100%; /* Grille pleine largeur */
+    height: 70%; /* Pleine hauteur */
+    box-sizing: border-box;
+}
+
+/* Conteneur d'image : gère la taille maximale des photos */
+.photoContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Coupe tout débordement */
+    display: flex; /* Centre les images */
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Couleur optionnelle pour un effet bande de film */
+}
+
+/* On force une taille maximale aux images */
+.photoContainer img {
+    max-width: 100%; /* Largeur maximale */
+    max-height: 100%; /* Hauteur maximale */
+    object-fit: contain; /* Contenir l'image dans son conteneur, sans déformer */
+}
+
+/* 1 photo - occupe tout l'espace */
+.gridOne {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* 2 photos - côte à côte */
+.gridTwo {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* 3 photos - une à gauche (grande), deux partagent la droite */
+.gridThree {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gridThree .photoContainer:nth-child(1) {
+    grid-column: 1 / 2; /* Première colonne */
+    grid-row: 1 / 3; /* Prend deux lignes */
+}
+
+/* 4 photos - 2 colonnes, 2 lignes */
+.gridFour {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* 5 photos - 2 sur la première ligne, 3 sur la seconde */
+.gridFive {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gridFive .photoContainer:nth-child(1),
+.gridFive .photoContainer:nth-child(2) {
+    grid-row: 1 / 2; /* Première ligne */
+}
+
+.gridFive .photoContainer:nth-child(3),
+.gridFive .photoContainer:nth-child(4),
+.gridFive .photoContainer:nth-child(5) {
+    grid-column: span 1; /* Deuxième ligne */
+    grid-row: 2 / 3;
+}
+
+/* 6 photos - 3 colonnes, 2 lignes */
+.gridSix {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* 7 photos - 3 colonnes, 3 lignes */
+.gridSeven {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes */
+    grid-template-rows: 1fr 1fr 1fr; /* 3 lignes */
+}
+
+.gridSeven .photoContainer:nth-child(1) {
+    grid-column: 1 / 2; /* Première colonne */
+    grid-row: 1 / 4; /* Première photo occupe deux lignes */
+}
+
+.gridSeven .photoContainer:nth-child(2) {
+    grid-column: 2 / 3; /* Deuxième colonne */
+    grid-row: 1 / 2; /* Première ligne */
+}
+
+.gridSeven .photoContainer:nth-child(3) {
+    grid-column: 3 / 4; /* Troisième colonne */
+    grid-row: 1 / 2; /* Première ligne */
+}
+
+.gridSeven .photoContainer:nth-child(4) {
+    grid-column: 2 / 3; /* Deuxième colonne */
+    grid-row: 2 / 3; /* Deuxième ligne */
+}
+
+.gridSeven .photoContainer:nth-child(5) {
+    grid-column: 3 / 4; /* Troisième colonne */
+    grid-row: 2 / 3; /* Deuxième ligne */
+}
+
+.gridSeven .photoContainer:nth-child(6) {
+    grid-column: 2 / 3; /* Deuxième colonne */
+    grid-row: 3 / 4; /* Troisième ligne */
+}
+
+.gridSeven .photoContainer:nth-child(7) {
+    grid-column: 3 / 4; /* Troisième colonne */
+    grid-row: 3 / 4; /* Troisième ligne */
+}
+
+

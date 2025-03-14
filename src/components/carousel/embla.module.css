@@ -1,0 +1,231 @@
+.embla {
+    --slide-height: 60vmin;
+    --slide-spacing: 2rem;
+    --slide-size: 60%;
+}
+
+.embla__viewport {
+    position: relative;
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    opacity: 0.4;
+}
+
+.slide_active {
+    opacity: 1;
+    z-index: 5;
+}
+
+.embla__slide__number {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--slide-height);
+    user-select: none;
+}
+
+.embla__buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.embla__button {
+    appearance: none;
+    background-color: transparent;
+    touch-action: manipulation;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.51);
+    width: 3.6rem;
+    height: 3.6rem;
+    z-index: 1;
+    border-radius: 50%;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.embla__button__svg {
+    width: 20%;
+}
+
+.embla__dots {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+    background-color: transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    width: 1rem;
+    height: 1rem;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-right: 4px;
+    -webkit-user-select: none; /* Pour Safari/anciennes versions de Chrome */
+    -moz-user-select: none;    /* Pour des anciennes versions de Firefox */
+    -ms-user-select: none;     /* Pour des anciennes versions d'Edge */
+    user-select: none;
+
+}
+
+.embla__dot:hover {
+    box-shadow: inset 0 0 0 0.1rem var(--color-primary);
+}
+
+.embla__dot:after {
+    box-shadow: inset 0 0 0 0.08rem rgba(61, 136, 149, 0.26);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    content: '';
+    gap: 5px;
+    -webkit-user-select: none; /* Pour Safari/anciennes versions de Chrome */
+    -moz-user-select: none;    /* Pour des anciennes versions de Firefox */
+    -ms-user-select: none;     /* Pour des anciennes versions d'Edge */
+    user-select: none;
+
+}
+
+.embla__dot--selected:after {
+    -webkit-user-select: none; /* Pour Safari/anciennes versions de Chrome */
+    -moz-user-select: none;    /* Pour des anciennes versions de Firefox */
+    -ms-user-select: none;     /* Pour des anciennes versions d'Edge */
+    user-select: none;
+
+    box-shadow: inset 0 0 0 0.15rem var(--color-primary);
+}
+
+
+.backgroundModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictureModal {
+    position: relative;
+    overflow: hidden;
+    width: 90vw;
+    height: 90vh;
+    max-width: 1200px;
+    max-height: 800px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.informations {
+    box-sizing: border-box;
+    bottom:0;
+    font-family: var(--font-magra-regular), serif;
+    border-top: 1px solid rgba(61, 136, 149);
+    background-color: rgba(61, 136, 149, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #ffffff;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+}
+
+.title {
+    font-size: clamp(0.8rem, 3vw, 1.3rem);
+    text-transform: uppercase;
+}
+
+.relativeWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.titleLocation {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.description {
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    text-align: start;
+    padding-left: 2rem;
+}
+.location {
+    white-space: nowrap;
+}
+
+.type {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+@media (max-width: 800px) {
+    .embla {
+        --slide-height: 500px;
+        --slide-spacing: 2rem;
+        --slide-size: 100%;
+    }
+}

@@ -1,11 +1,13 @@
-.page {
+.container {
+    color: black;
     font-family: var(--font-magra-regular);
-    background-image: linear-gradient(to right, rgba(57, 121, 134, 0.7), rgba(255, 255, 255, 0.4)), url('/photos/background-home.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
-.container {
-    color: white;
+.section {
+    height: calc(100vh - 70px);
+    scroll-snap-align: start;
+    scroll-padding-inline-start: 70px;
 }

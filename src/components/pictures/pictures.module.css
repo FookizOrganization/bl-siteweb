@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.picturesContainer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: var(--color-primary);
+    font-family: var(--font-magra-bold);
+    font-size: clamp( 2rem, 3vw, 3rem);
+    padding: clamp( 2.5rem, 4vw, 4rem);
+    text-transform: uppercase;
+
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pictureWrapper {
+    background-color: var(--color-primary);
+    height: 50vmin;
+    cursor: pointer;
+}
+
+.carouselContainer {
+    width: 100%;
+    padding-bottom: 6vmax;
+}

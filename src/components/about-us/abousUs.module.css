@@ -1,0 +1,44 @@
+.container {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.description {
+    font-family: var(--font-magra-regular), serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: black;
+    text-align: center;
+    padding: 0 2rem 4rem 2rem;
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.cardContainer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 4vmax;
+    padding-bottom: 4vmax;
+}
+
+.title {
+    color: var(--color-primary);
+    font-family: var(--font-magra-bold), serif;
+    font-size: clamp( 2rem, 3vw, 3rem);
+    padding: clamp( 2.5rem, 4vw, 4rem);
+    text-transform: uppercase;
+
+}
+
+.primaryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
