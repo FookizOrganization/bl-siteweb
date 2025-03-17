@@ -22,9 +22,22 @@ function Realisations() {
         setSelectedPicture(null);
     };
 
+    const picturesMemo = React.useMemo(() => {
+        return pictures.map((value, index) => (
+            <div
+                key={index}
+                className="element"
+                onClick={() => showModal(value)}
+            >
+                <PictureWrapper picture={value} />
+            </div>
+        ));
+    }, [pictures]);
+
+
     return (
         <div className="RealisationsContainer">
-            {isModalOpen && <Modal
+            {isModalOpen && selectedPicture && <Modal
                 open={isModalOpen}
                 onCancel={handleCancel}
                 footer={null}
@@ -59,15 +72,8 @@ function Realisations() {
                         autoplaySpeed={4000}
                         arrows
                         infinite
-                        draggable
                     >
-                        {
-                            pictures.map((value, index) => (
-                                <div key={index} className="element" onClick={() => showModal(value)}>
-                                    <PictureWrapper picture={value} />
-                                </div>
-                            ))
-                        }
+                        {picturesMemo}
                     </Carousel>
                 </div>
             </div>
