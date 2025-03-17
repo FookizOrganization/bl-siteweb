@@ -1,10 +1,19 @@
-import type { Metadata } from "next";
+import type {Metadata, Viewport} from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "B & L - Portes et fenêtres",
   description: "Bastien Letouq - Portes et fenêtres",
 };
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    // Also supported but less commonly used
+    // interactiveWidget: 'resizes-visual',
+}
 
 import localFont from 'next/font/local';
 import {AntdRegistry} from "@ant-design/nextjs-registry";
@@ -63,12 +72,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body
-          className={`${geist.variable} ${geistMono.variable} ${magraRegular.variable} ${magraBold.variable}`}
-      >
-        <AntdRegistry>{children}</AntdRegistry>
-      </body>
-    </html>
+      <html lang="fr">
+          <body
+              className={`${geist.variable} ${geistMono.variable} ${magraRegular.variable} ${magraBold.variable}`}
+          >
+            <AntdRegistry>{children}</AntdRegistry>
+          </body>
+      </html>
   );
 }

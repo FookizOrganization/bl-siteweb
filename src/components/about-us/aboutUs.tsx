@@ -71,9 +71,9 @@ function AboutUs() {
                     <CardProfile
                         name={"Quentin MONTEIRO"}
                         job={"Technico-commercial"}
-                        phone={"07 81 73 83 30"}
+                        phone={"07 67 71 10 46"}
                         reverse={true}
-                        url_photo={"/photos/profile.png"}
+                        url_photo={"/photos/img.png"}
                         description={
                             "Bonjour, je m’appelle Quentin, commercial spécialisé et aujourd’hui je souhaite vous partager comment on peut répondre à vos besoins spécifiques pour transformer vos projets d’aménagement et d’amélioration de votre habitat. \n" +
                             "Mon rôle est de vous accompagner dans vos choix de solutions esthétiques et fonctionnelles.\n" +

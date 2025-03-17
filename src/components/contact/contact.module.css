@@ -6,6 +6,11 @@
     border-radius: 4px;
     border: 1px solid white;
     cursor: pointer;
+    -webkit-appearance: none;
+    color: white; /* Couleur explicite pour le texte */
+    text-decoration: none; /* Supprimer tout style de soulignement (utile au cas où) */
+
+
 }
 
 .btnForm {
@@ -20,10 +25,16 @@
 
 .validBtn {
     background-color: var(--color-primary);
+    color: white; /* Couleur explicite pour le texte */
+    text-decoration: none; /* Supprimer tout style de soulignement (utile au cas où) */
+
 }
 
 .cancelBtn {
     background-color: var(--color-cancel);
+    color: white; /* Couleur explicite pour le texte */
+    text-decoration: none; /* Supprimer tout style de soulignement (utile au cas où) */
+
 }
 
 .backgroundModal {

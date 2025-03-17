@@ -14,10 +14,9 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
                       autoplaySpeed={4000}
                       arrows
                       infinite
-                      draggable
             >
                 {photos.map((src, index) => (
-                        <Image src={src} style={{
+                        <Image src={src} key={index} style={{
                             width: '100%',
                             aspectRatio: 1,// L'image remplit le conteneur horizontalement
                             objectFit: 'cover', // Assure qu'elle ne soit pas déformée

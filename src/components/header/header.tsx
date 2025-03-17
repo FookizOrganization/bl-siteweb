@@ -12,7 +12,7 @@ function Header() {
             <div className={styles.rightContainer}>
                 <div className={styles.numberPhone}>
                     <div>Bastien - 07.81.73.83.30</div>
-                    <div>Quentin - 07.81.73.83.30</div>
+                    <div>Quentin - 07.67.71.10.46</div>
                 </div>
                 <Contact />
             </div>
