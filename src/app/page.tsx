@@ -14,7 +14,7 @@ export default function Main() {
         <Header />
         <HomeContent />
         <AboutUs />
-        <Realisations />
+        <Pictures />
         <Footer />
     </>
 
