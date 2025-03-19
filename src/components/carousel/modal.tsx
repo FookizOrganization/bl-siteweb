@@ -77,9 +77,10 @@ const ModalCarousel: React.FC<ModalCarouselProps> = (props) => {
                             ))}
                         </div>
 
-                        <div className={styles.embla__buttons}>
+                        <div className={styles.embla__prevButton}>
                             <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                            <div />
+                        </div>
+                        <div className={styles.embla__nextButton}>
                             <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
                         </div>
                     </div>

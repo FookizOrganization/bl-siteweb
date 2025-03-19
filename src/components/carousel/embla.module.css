@@ -55,6 +55,28 @@
     align-items: center;
 }
 
+.embla__prevButton {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    justify-items: center;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.embla__nextButton {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 1;
+    justify-items: center;
+    gap: 0.6rem;
+    align-items: center;
+}
+
 .embla__button {
     appearance: none;
     background-color: transparent;
