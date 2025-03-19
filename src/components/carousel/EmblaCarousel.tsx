@@ -21,7 +21,9 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
     const { slides, options } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({
+        delay: 5000
+    })])
     const [contentModal, setContentModal] = React.useState<any>(null);
 
     const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {

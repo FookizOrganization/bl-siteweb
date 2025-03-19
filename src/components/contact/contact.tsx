@@ -2,10 +2,12 @@
 
 import styles from "./contact.module.css";
 import React, { useState } from "react";
-import ProvisionDropdown from "@/components/contact/provisionDropdown";
+import ProvisionDropdown, {TableData} from "@/components/contact/provisionDropdown";
 import { Input } from "antd";
 
 function Contact() {
+
+    const [tableData, setTableData] = useState<TableData[]>([]); // Pour stocker les données de ProvisionDropdown
 
 
     const [isOpen, setIsOpen] = useState(false);
@@ -21,11 +23,36 @@ function Contact() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Form data:", formData);
-        setIsOpen(false);
-        alert("Message envoyé !");
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    tableData
+                }),
+            });
+
+            if (response.ok) {
+                alert('Message envoyé avec succès !');
+                setIsOpen(false);
+                setFormData({ name: '', email: '', phone: '', message: '' }); // Réinitialiser le formulaire
+                setTableData([]);
+
+            } else {
+                const errorData = await response.json();
+                console.error('Erreur lors de l\'envoi:', errorData);
+                alert('Échec de l\'envoi du message. Réessayez plus tard.');
+            }
+        } catch (error) {
+            console.error('Erreur de requête:', error);
+            alert('Erreur réseau. Réessayez plus tard.');
+        }
     };
 
     return (
@@ -106,7 +133,7 @@ function Contact() {
                                         </div>
                                     </form>
                                     <div className={styles.provisionContainer}>
-                                        <ProvisionDropdown />
+                                        <ProvisionDropdown onTableChange={setTableData}/>
                                     </div>
                                 </div>
                                 <div className={styles.footer}>
