@@ -19,13 +19,6 @@ export function PictureWrapper(props: { picture: any }) {
                         </div>
                         <div className={styles.location}>{`📍 ${props.picture.location}`}</div>
                     </div>
-                    <div className={styles.description}>
-                        <ul >{(props.picture.description as string).split('--').map((line, index) => (
-                            <li key={index} className={styles.paragraph}>
-                                {line}
-                            </li>
-                        ))}</ul>
-                    </div>
                 </div>
         </div>
     );

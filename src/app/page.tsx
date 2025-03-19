@@ -5,8 +5,6 @@ import Pictures from "@/components/pictures/pictures";
 import Header from "@/components/header/header";
 import React from "react";
 import Footer from "@/components/footer/footer";
-import PhotoGrid from "@/components/pictures/modal";
-import Realisations from "@/components/Realisations/realisations";
 
 export default function Main() {
   return (

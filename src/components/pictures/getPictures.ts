@@ -41,6 +41,8 @@ export function getPictures(): any[] {
         {
             photos: [
                 "/photos/pictures/IMG_7911.jpeg",
+                "/photos/pictures/IMG_7910.jpeg",
+                "/photos/pictures/IMG_7911.jpeg",
                 "/photos/pictures/IMG_7910.jpeg"
             ],
             title: "Fenêtre PVC",
@@ -74,6 +76,8 @@ export function getPictures(): any[] {
         },
         {
             photos: [
+                "/photos/pictures/IMG_8698.jpeg",
+                "/photos/pictures/IMG_8976.jpeg",
                 "/photos/pictures/IMG_8698.jpeg",
                 "/photos/pictures/IMG_8976.jpeg",
             ],
@@ -110,6 +114,8 @@ export function getPictures(): any[] {
             photos: [
                 "/photos/pictures/IMG_9612.jpeg",
                 "/photos/pictures/IMG_9611.jpeg",
+                "/photos/pictures/IMG_9612.jpeg",
+                "/photos/pictures/IMG_9611.jpeg",
             ],
             title: "Porte de cave",
             type: "Gamme Torjman: modèle TEMPO",
@@ -118,6 +124,8 @@ export function getPictures(): any[] {
         },
         {
             photos: [
+                "/photos/pictures/IMG_9505.jpeg",
+                "/photos/pictures/IMG_9505.jpeg",
                 "/photos/pictures/IMG_9505.jpeg",
             ],
             title: "Porte de garage",
@@ -154,6 +162,8 @@ export function getPictures(): any[] {
             photos: [
                 "/photos/pictures/IMG_7979.jpeg",
                 "/photos/pictures/IMG_7976.jpeg",
+                "/photos/pictures/IMG_7979.jpeg",
+                "/photos/pictures/IMG_7976.jpeg",
             ],
             title: "Pose en rénovation",
             type: "Gamme essentiel",
@@ -175,6 +185,8 @@ export function getPictures(): any[] {
         },
         {
             photos: [
+                "/photos/pictures/IMG_8854.jpeg",
+                "/photos/pictures/IMG_8857.jpeg",
                 "/photos/pictures/IMG_8854.jpeg",
                 "/photos/pictures/IMG_8857.jpeg",
             ],

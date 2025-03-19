@@ -1,5 +1,5 @@
 "use client"
-import React, {useCallback, useEffect} from 'react'
+import React, {useCallback} from 'react'
 import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import {
@@ -11,7 +11,8 @@ import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import styles from "./embla.module.css";
 import { PictureWrapper } from "@/components/pictures/pictureWrapper";
-import PhotoGrid from "@/components/pictures/modal";
+import {Image} from "antd";
+import ModalCarousel from "@/components/carousel/modal";
 
 type PropType = {
     slides: any[]
@@ -84,37 +85,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 </div>
             </section>
             {contentModal !== null &&
-                <div className={styles.backgroundModal} onClick={() => setContentModal(null)}>
-                    <div
-                        className={styles.pictureModal}
-                        onClick={(event) => event.stopPropagation()}
-                    >
-                        <div className={styles.closeIcon} onClick={() => setContentModal(null)}>
-                            <svg width="24px" height="24px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 21.32L21 3.32001" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M3 3.32001L21 21.32" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <PhotoGrid photos={contentModal.photos} />
-                        <div className={styles.informations}>
-                            <div className={styles.titleLocation}>
-                                <div>
-                                    <div className={styles.title}>{`${contentModal.title}`}</div>
-                                    {contentModal.type && <div className={styles.type}>{contentModal.type}</div>}
-                                </div>
-                                <div className={styles.location}>{`📍 ${contentModal.location}`}</div>
-                            </div>
-                            <div className={styles.description}>
-                                <ul >{(contentModal.description as string).split('--').map((line, index) => (
-                                    <li key={index} className={styles.paragraph}>
-                                        {line}
-                                    </li>
-                                ))}</ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <ModalCarousel contentModal={contentModal} setContentModal={setContentModal} />
             }
         </>
     )
