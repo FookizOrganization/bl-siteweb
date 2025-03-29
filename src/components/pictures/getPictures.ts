@@ -2,9 +2,9 @@ export function getPictures(): any[] {
     return [
         {
             photos: [
-                "/photos/pictures/IMG_8992.jpeg",
-                "/photos/pictures/IMG_8993.jpeg",
-                "/photos/pictures/IMG_8O43.jpeg",
+                { src: "/photos/pictures/IMG_8O43.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_8992.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8993.jpeg", type: "after" },
             ],
             title: "Porte d’entrée",
             type: "Gamme sensation 2 : gris argent 7001 fine texture.",
@@ -13,10 +13,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_6751.jpeg",
-                "/photos/pictures/IMG_6757.jpeg",
-                "/photos/pictures/IMG_6750.jpeg",
-                "/photos/pictures/IMG_6756.jpeg",
+                { src: "/photos/pictures/IMG_6751.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_6750.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_6756.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_6757.jpeg", type: "after" },
             ],
             title: "Porte fenêtre",
             type: "Gamme sérénité PVC blanc",
@@ -25,13 +25,14 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_7677.jpeg",
-                "/photos/pictures/IMG_7676.jpeg",
-                "/photos/pictures/IMG_7680.jpeg",
-                "/photos/pictures/9493A0E1-5118-4ACD-B5DF-200D642FDED7.jpg",
-                "/photos/pictures/IMG_7675.jpeg",
-                "/photos/pictures/IMG_7678.jpeg",
-                "/photos/pictures/IMG_7682.jpeg",
+                { src: "/photos/pictures/IMG_7676.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_7675.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_7678.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_7680.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_7677.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_7680.jpeg", type: "after" },
+                { src: "/photos/pictures/9493A0E1-5118-4ACD-B5DF-200D642FDED7.jpg", type: "after" },
+                { src: "/photos/pictures/IMG_7682.jpeg", type: "after" },
             ],
             title: "Création volet roulant avec coffre ",
             type: "",
@@ -40,10 +41,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_7911.jpeg",
-                "/photos/pictures/IMG_7910.jpeg",
-                "/photos/pictures/IMG_7911.jpeg",
-                "/photos/pictures/IMG_7910.jpeg"
+                { src: "/photos/pictures/IMG_7910.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_7911.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_7910.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_7911.jpeg", type: "after" },
             ],
             title: "Fenêtre PVC",
             type: "Gamme sérénité",
@@ -52,9 +53,9 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_7994.jpeg",
-                "/photos/pictures/IMG_7995.jpeg",
-                "/photos/pictures/IMG_7996.jpeg",
+                { src: "/photos/pictures/IMG_7996.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_7994.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_7995.jpeg", type: "after" },
             ],
             title: "Porte entrée",
             type: "Gamme MONALU modèle divine vitrée: blanc intérieur, bleu pigeon ral 5004 extérieur",
@@ -63,10 +64,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_8703.jpeg",
-                "/photos/pictures/IMG_8702.jpeg",
-                "/photos/pictures/IMG_8701.jpeg",
-                "/photos/pictures/IMG_8699.jpeg",
+                { src: "/photos/pictures/IMG_8699.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_8698.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_8702.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8701.jpeg", type: "after" },
             ],
             title: "Porte fenêtre deux vantaux ",
             type: "Gamme sérénité: PVC blanc",
@@ -76,10 +77,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_8698.jpeg",
-                "/photos/pictures/IMG_8976.jpeg",
-                "/photos/pictures/IMG_8698.jpeg",
-                "/photos/pictures/IMG_8976.jpeg",
+                { src: "/photos/pictures/IMG_8703.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_8703.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_8976.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8976.jpeg", type: "after" },
             ],
             title: "Porte d’entrée",
             type: "Gamme Monalu: modèle Hannover",
@@ -88,10 +89,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_8350.jpeg",
-                "/photos/pictures/IMG_9068.jpeg",
-                "/photos/pictures/IMG_9067.jpeg",
-                "/photos/pictures/IMG_8351.jpeg",
+                { src: "/photos/pictures/IMG_8350.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_8351.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_9068.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_9067.jpeg", type: "after" },
             ],
             title: "Porte d’entrée blindée",
             type: "Gamme diamant: modèle PICARD ",
@@ -101,9 +102,9 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_8151.jpeg",
-                "/photos/pictures/IMG_8175.jpeg",
-                "/photos/pictures/IMG_8171.jpeg"
+                { src: "/photos/pictures/IMG_8151.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_8175.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8171.jpeg", type: "after" },
             ],
             title: "Portail",
             type: "Modèle Littleton2 gris quartz",
@@ -112,10 +113,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_9612.jpeg",
-                "/photos/pictures/IMG_9611.jpeg",
-                "/photos/pictures/IMG_9612.jpeg",
-                "/photos/pictures/IMG_9611.jpeg",
+                { src: "/photos/pictures/IMG_9612.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_9611.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_9612.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_9611.jpeg", type: "after" },
             ],
             title: "Porte de cave",
             type: "Gamme Torjman: modèle TEMPO",
@@ -124,9 +125,9 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_9505.jpeg",
-                "/photos/pictures/IMG_9505.jpeg",
-                "/photos/pictures/IMG_9505.jpeg",
+                { src: "/photos/pictures/IMG_9505.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_9505.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_9505.jpeg", type: "after" },
             ],
             title: "Porte de garage",
             type: "Marque NOVOFERM",
@@ -135,10 +136,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_9940.jpeg",
-                "/photos/pictures/IMG_9939.jpeg",
-                "/photos/pictures/e0b4b58f-7ab7-45f2-a521-bd6b03ff548b.jpg",
-                "/photos/pictures/IMG_9941.jpeg",
+                { src: "/photos/pictures/IMG_9940.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_9939.jpeg", type: "after" },
+                { src: "/photos/pictures/e0b4b58f-7ab7-45f2-a521-bd6b03ff548b.jpg", type: "after" },
+                { src: "/photos/pictures/IMG_9941.jpeg", type: "after" },
             ],
             title: "Fourniture et pose fenêtres suite à un agrandissement en ossature bois.",
             type: "Gamme sensation",
@@ -149,9 +150,9 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_9373.jpeg",
-                "/photos/pictures/IMG_9371.jpeg",
-                "/photos/pictures/IMG_9372.jpeg",
+                { src: "/photos/pictures/IMG_9373.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_9371.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_9372.jpeg", type: "after" },
             ],
             title: "Volets battants",
             type: "",
@@ -160,10 +161,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_7979.jpeg",
-                "/photos/pictures/IMG_7976.jpeg",
-                "/photos/pictures/IMG_7979.jpeg",
-                "/photos/pictures/IMG_7976.jpeg",
+                { src: "/photos/pictures/IMG_7979.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_7976.jpeg", type: "before" },
+                { src: "/photos/pictures/IMG_7979.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_7976.jpeg", type: "before" },
             ],
             title: "Pose en rénovation",
             type: "Gamme essentiel",
@@ -172,9 +173,9 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_0011.jpeg",
-                "/photos/pictures/IMG_0012.jpeg",
-                "/photos/pictures/IMG_0010.jpeg",
+                { src: "/photos/pictures/IMG_0011.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_0012.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_0010.jpeg", type: "after" },
             ],
             title: "Porte de garage latérale",
             type: "",
@@ -185,10 +186,10 @@ export function getPictures(): any[] {
         },
         {
             photos: [
-                "/photos/pictures/IMG_8854.jpeg",
-                "/photos/pictures/IMG_8857.jpeg",
-                "/photos/pictures/IMG_8854.jpeg",
-                "/photos/pictures/IMG_8857.jpeg",
+                { src: "/photos/pictures/IMG_8854.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8857.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8854.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8857.jpeg", type: "after" },
             ],
             title: "Fenêtres avec volets roulants intégrés",
             type: "",

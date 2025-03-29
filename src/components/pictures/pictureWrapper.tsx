@@ -9,7 +9,7 @@ export function PictureWrapper(props: { picture: any }) {
     return (
         <div
             className={styles.pictureWrapper}
-            style={{ backgroundImage: `url('${props.picture.photos.at(0)}')` }}
+            style={{ backgroundImage: `url('${props.picture.photos.filter((el: any) => (el.type === "after")).at(0).src}')` }}
         >
             <div className={styles.informations}>
                     <div className={styles.titleLocation}>

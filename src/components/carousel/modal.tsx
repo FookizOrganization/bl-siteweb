@@ -63,12 +63,13 @@ const ModalCarousel: React.FC<ModalCarouselProps> = (props) => {
                 <section className={styles.emblaModal} dir="rtl">
                     <div className={styles.embla__viewport} ref={emblaRef}>
                         <div className={styles.embla__container}>
-                            {contentModal.photos.map((value: string, index: number) => (
+                            {contentModal.photos.map((value: any, index: number) => (
                                 <div className={`${styles.embla__slide} ${index === selectedIndex ? styles.slide_active : ''}`} key={index}>
                                     <div
                                         className={styles.embla__slide__number}
                                     >
-                                        <Image src={value} key={index} style={{
+                                        <div className={styles.typePicture}>{value.type === "after" ? "Après" : "Avant"}</div>
+                                        <Image src={value.src} key={index} style={{
                                             aspectRatio: 1,
                                             objectFit: 'cover',
                                         }} />

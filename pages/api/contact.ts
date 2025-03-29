@@ -1,7 +1,6 @@
-// pages/api/contact.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import Mailjet from 'node-mailjet';
-import {TableData} from "@/components/contact/provisionDropdown";
+import { TableData } from "@/components/contact/provisionDropdown";
 
 const mailjet = Mailjet.apiConnect(
     process.env.MAILJET_API_KEY as string,
@@ -24,10 +23,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ?.map(
             (row: TableData) =>
                 `<tr>
-                    <td>${row.firstLevel}</td>
-                    <td>${row.secondLevel}</td>
-                    <td>${row.thirdLevel}</td>
-                    <td>${row.materialLevel}</td>
+                    <td>${row.prestation}</td>
+                    <td>${row.material}</td>
+                    <td>${row.quantity}</td>
                 </tr>`
         )
         .join('') || '';
@@ -54,20 +52,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                         <p><strong>Téléphone :</strong> ${phone || "non spécifié"}</p>
                         <p><strong>Message :</strong></p>
                         <p>${message}</p>
-                        <h4>Informations additionnelles :</h4>
-                        <table border="1" style="width: 100%; border-collapse: collapse;">
-                            <thead>
-                                <tr>
-                                    <th>Premier Niveau</th>
-                                    <th>Deuxième Niveau</th>
-                                    <th>Troisième Niveau</th>
-                                    <th>Niveau Matériau</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${formattedTableData}
-                            </tbody>
-                        </table>
+                        ${
+                        tableData?.length
+                            ? `<h4>Informations additionnelles :</h4>
+                                   <table border="1" style="width: 100%; border-collapse: collapse;">
+                                        <thead>
+                                            <tr>
+                                                <th>Prestation</th>
+                                                <th>Matériau</th>
+                                                <th>Quantité</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            ${formattedTableData}
+                                        </tbody>
+                                    </table>`
+                            : "<p>Aucune information additionnelle fournie.</p>"
+                    }
                     `,
                 },
             ],

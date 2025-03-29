@@ -36,6 +36,13 @@
 
 }
 
+.validBtn:disabled {
+    background-color: grey;
+    color: white; /* Couleur explicite pour le texte */
+    text-decoration: none; /* Supprimer tout style de soulignement (utile au cas où) */
+    cursor: not-allowed;
+}
+
 .cancelBtn {
     background-color: var(--color-cancel);
     color: white; /* Couleur explicite pour le texte */
@@ -204,4 +211,79 @@
         width: 100% !important;
     }
 
+}
+
+/* Conteneur principal du tableau pour gérer le défilement horizontal */
+.provisionDropdown .ant-table {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Réduire la taille des polices sur mobile */
+@media (max-width: 768px) {
+    .provisionDropdown .ant-table-cell {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .provisionDropdown .ant-table-header {
+        font-size: 13px;
+    }
+
+    .provisionDropdown .ant-btn-link {
+        font-size: 12px;
+    }
+}
+
+/* Masquer les colonnes non critiques sur très petit écran */
+@media (max-width: 576px) {
+    .provisionDropdown table {
+        font-size: 10px;
+    }
+
+    .provisionDropdown .optionalColumn { /* Exemple pour masquer une colonne */
+        display: none;
+    }
+}
+
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary);
+    width: 100%;
+    gap:2px;
+}
+
+.provisionContainer {
+    width: 100%;
+    max-width: 574px;
+}
+
+.provisionDropdown {
+    width: 100%;
+    max-width: 574px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownGroup {
+    width: 100%;
+}
+
+.cardItem {
+    display: flex;
+    padding: 6px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@media (min-width: 676px) {
+    .tableContainer {
+        overflow-x: auto;
+    }
 }

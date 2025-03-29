@@ -4,6 +4,7 @@ import styles from "./contact.module.css";
 import React, { useState } from "react";
 import ProvisionDropdown, {TableData} from "@/components/contact/provisionDropdown";
 import { Input } from "antd";
+import { motion } from "motion/react";
 
 function Contact() {
 
@@ -18,6 +19,10 @@ function Contact() {
         message: "",
     });
 
+    const isDisabled = !formData.name || !formData.email || !formData.phone || !formData.message;
+
+    const [isLoaded, setIsLoaded] = useState(false);
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -27,6 +32,7 @@ function Contact() {
         e.preventDefault();
 
         try {
+            setIsLoaded(true);
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
@@ -38,8 +44,9 @@ function Contact() {
                 }),
             });
 
+            setIsLoaded(false);
+
             if (response.ok) {
-                alert('Message envoyé avec succès !');
                 setIsOpen(false);
                 setFormData({ name: '', email: '', phone: '', message: '' }); // Réinitialiser le formulaire
                 setTableData([]);
@@ -132,7 +139,8 @@ function Contact() {
                                             </div>
                                         </div>
                                     </form>
-                                    <div className={styles.provisionContainer}>
+                                    <div
+                                        className={styles.provisionContainer}>
                                         <ProvisionDropdown onTableChange={setTableData}/>
                                     </div>
                                 </div>
@@ -140,13 +148,16 @@ function Contact() {
                                     <button
                                         type="submit"
                                         className={`${styles.btnForm} ${styles.validBtn}`}
+                                        disabled={isDisabled}
                                         onClick={handleSubmit}
+                                        style={{ width: "150px" }}
                                     >
-                                        Envoyer
+                                        {isLoaded ? "Envoi en cours..." : "Envoyer"}
                                     </button>
                                     <button
                                         className={`${styles.btnForm} ${styles.cancelBtn}`}
                                         onClick={() => setIsOpen(false)}
+                                        style={{ width: "150px" }}
                                     >
                                         Annuler
                                     </button>
