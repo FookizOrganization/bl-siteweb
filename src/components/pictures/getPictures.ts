@@ -2,7 +2,7 @@ export function getPictures(): any[] {
     return [
         {
             photos: [
-                { src: "/photos/pictures/IMG_8O43.jpeg", type: "before" },
+                { src: "/photos/pictures/before.jpeg", type: "before" },
                 { src: "/photos/pictures/IMG_8992.jpeg", type: "after" },
                 { src: "/photos/pictures/IMG_8993.jpeg", type: "after" },
             ],
@@ -78,8 +78,8 @@ export function getPictures(): any[] {
         {
             photos: [
                 { src: "/photos/pictures/IMG_8703.jpeg", type: "before" },
-                { src: "/photos/pictures/IMG_8703.jpeg", type: "before" },
                 { src: "/photos/pictures/IMG_8976.jpeg", type: "after" },
+                { src: "/photos/pictures/IMG_8703.jpeg", type: "before" },
                 { src: "/photos/pictures/IMG_8976.jpeg", type: "after" },
             ],
             title: "Porte d’entrée",

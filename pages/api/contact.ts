@@ -35,12 +35,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             Messages: [
                 {
                     From: {
-                        Email: 'quentin.lepateley@gmail.com',
+                        Email: 'blportesfenetres@gmail.com',
                         Name: 'Prise de contact',
                     },
                     To: [
                         {
-                            Email: 'quentin.lepateley@gmail.com',
+                            Email: 'blportesfenetres@gmail.com',
                             Name: 'Prise de contact',
                         },
                     ],
