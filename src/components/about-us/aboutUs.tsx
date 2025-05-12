@@ -61,26 +61,6 @@ function AboutUs() {
                         }
                     />
                 </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    variants={fadeInFromBottom}
-                    transition={{ duration: 0.6, delay: 0.6 }} // Retard supplémentaire
-                    viewport={{ once: true, amount: 0.2 }}
-                >
-                    <CardProfile
-                        name={"Quentin Monteiro"}
-                        job={"Technico-commercial"}
-                        phone={"07 67 71 10 46"}
-                        reverse={true}
-                        url_photo={"/photos/img3.png"}
-                        description={
-                            "Bonjour, je m’appelle Quentin, commercial spécialisé et aujourd’hui je souhaite vous partager comment on peut répondre à vos besoins spécifiques pour transformer vos projets d’aménagement et d’amélioration de votre habitat. \n" +
-                            "Mon rôle est de vous accompagner dans vos choix de solutions esthétiques et fonctionnelles.\n" +
-                            "Ensemble, nous allons créer un espace qui vous ressemble et qui répond à vos attentes en matière de qualité, de sécurité et d’esthétique, qui s’harmonise avec votre style de vie et votre budget."
-                        }
-                    />
-                </motion.div>
             </div>
         </div>
     );
